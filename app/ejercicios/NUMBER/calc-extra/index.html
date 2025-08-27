@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Plantilla en HTML5">
+    <title>Tipo NUMBER. Mini calculadora</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="../js/validar.js" type="text/javascript" defer></script>
+    <script src="./js/script.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-profile">
+            <img src="../../../../img/logojs6.png" alt="Foto de perfil" />
+        </div>
+        <div class="header-content">
+            <h3>JavaScrip (EcmaScript 6) JS6</h3>
+            <h4>Desarrollo WEB en entorno cliente</h4>
+            <h5>Tipo NUMBER. Mini calculadora</h5>
+        </div>
+        <div class="header-profile">
+            <img src="../../../../img/fotoPerfil.png" alt="Foto de perfil" />
+        </div>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav class="nav-container">
+        <ul class="navbar">
+            <li><a href="../../../index.html">Inicio</a></li>
+            <li><a href="https://www.w3schools.com/js/default.asp">w3schools</a></li>
+            <li><a href="https://es.javascript.info/js">javascript.info</a></li>
+            <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN</a></li>
+        </ul>
+        <button class="btn-logout"  onclick="cerrarSesion()">cerrar sesión</button>
+    </nav>
+
+    <!-- Contenido principal de la página -->
+    <main>
+
+        <div class="container">
+            <div class="pantalla">
+                <div id="expresion"></div>
+                <div id="guardado"></div>
+                <div id="resultado"></div>
+            </div>
+
+            <div class="switch-container teclado">
+                <button onclick="activarGuardado()">M+</button>
+                <button class="btnGuardar" onclick="usarMemoria('A')">A</button>
+                <button class="btnGuardar"  onclick="usarMemoria('B')">B</button>
+                <label class="switch">
+                    <input id="checkbox" type="checkbox">
+                    <span class="slider"></span>
+                    <span class="on">ON</span>
+                    <span class="off">OFF</span>
+                </label>
+            </div>
+
+            <div class="teclado">
+                <div id="cientifica" class="panel-cientifica">
+                    <div>
+                        <button onclick="agregar('(')">(</button>
+                        <button onclick="agregar(')')">)</button>
+                        <button onclick="agregar('pi')">π</button>
+                        <button onclick="agregar('e')">e</button>
+                    </div>
+                    <div>
+                        <button onclick="agregar('sqrt(')">√</button>
+                        <button onclick="agregar('log(')">log</button>
+                        <button onclick="agregar('ln(')">ln</button>
+                        <button onclick="agregar('^')">^</button>
+                    </div>
+                    <div>
+                        <button onclick="agregar('sin(')">sin</button>
+                        <button onclick="agregar('cos(')">cos</button>
+                        <button onclick="agregar('tan(')">tan</button>
+                        <button onclick="agregar('rnd(')">Rnd</button>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+
+                        <button onclick="borrar()">←</button>
+                        <button onclick="limpiar()">C</button>
+                        <button onclick="agregar('%')">%</button>
+                        <button class="color" onclick="agregar('/')">/</button>
+                    </div>
+                    <div>
+                        <button onclick="agregar('7')">7</button>
+                        <button onclick="agregar('8')">8</button>
+                        <button onclick="agregar('9')">9</button>
+                        <button class="color" onclick="agregar('*')">*</button>
+                    </div>
+                    <div>
+                        <button onclick="agregar('4')">4</button>
+                        <button onclick="agregar('5')">5</button>
+                        <button onclick="agregar('6')">6</button>
+                        <button class="color" onclick="agregar('-')">-</button>
+                    </div>
+                    <div>
+                        <button onclick="agregar('1')">1</button>
+                        <button onclick="agregar('2')">2</button>
+                        <button onclick="agregar('3')">3</button>
+                        <button class="color" onclick="agregar('+')">+</button>
+                    </div>
+                    <div>
+                        <button onclick="cientifica()">🧮</button>
+                        <button onclick="agregar('0')">0</button>
+                        <button onclick="agregar('.')">.</button>
+                        <button class="color" onclick="calcular()">=</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+         © Enrique Antonio Molina Fernandez ☺
+    </footer>
+</body>
+
+</html>
